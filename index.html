@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HarmlessBird</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/styles2.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapi.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link hef="https://font.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+    
+    <!-- Use Jquery AJAX to grab information from other files such as header.html and footer.html similar to a php include -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#nav").load("HTML/nav.html #nav1");
+            $("#header").load("HTML/header.html");
+            $("#footer").load("HTML/footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Grab the Header information from "HTML/header.html"-->
+    <Header>
+        <div id="header"><p></p></div>
+        <div id="nav"><p></p></div>
+    </Header>
+
+
+    <div class="content">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+ 
+      
+        <table style="width:100%">
+                <tr>
+                   <td width="25%">
+
+                   </td>
+
+                   <td width="50%">
+                        <h2>HarmlessBird</h2>
+                    </td>
+
+                    <td width="25%">
+
+                    </td>
+                </tr>
+        </table>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- Grab the Footer information from "HTML/footer.html"-->
+    <div id="footer"><p></p></div>
+      
+    
+    <!-- Script to make the "scroll to top" button work -->
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+            
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+            
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+</html>

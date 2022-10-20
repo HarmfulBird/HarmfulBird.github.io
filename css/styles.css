@@ -1,0 +1,25 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    background-color: #ffffff;
+    margin: 0%;
+}
+
+/* content*/
+.content{
+    margin-left:30px;
+    margin-right:30px;
+}
+
+/* Home page image */
+.homeimage{
+    margin-top: 5px;
+    width: auto;
+}
+
+/* Reference page background image */
+.referenceimage{
+    background-image: url("../images/reference.jpg");
+    width: auto;
+}
