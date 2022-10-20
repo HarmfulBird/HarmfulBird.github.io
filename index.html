@@ -6,28 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HarmlessBird</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <link rel="stylesheet" href="css/styles2.css" type="text/css">
 
-    <link rel="preconnect" href="https://fonts.googleapi.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link hef="https://font.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     
-    <!-- Use Jquery AJAX to grab information from other files such as header.html and footer.html similar to a php include -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#nav").load("HTML/nav.html #nav1");
-            $("#header").load("HTML/header.html");
-            $("#footer").load("HTML/footer.html");
-        });
-    </script>
 </head>
 
 <body>
-    <!-- Grab the Header information from "HTML/header.html"-->
-    <Header>
-        <div id="header"><p></p></div>
-        <div id="nav"><p></p></div>
+    <Header>  
+        <img src="assets/Avatar.png" alt="Avatar" class="avatar">    HarmlessBird       
     </Header>
 
 
@@ -37,16 +26,17 @@
       
         <table style="width:100%">
                 <tr>
-                   <td width="25%">
+                    <td width="25%">
+                    </td>
 
-                   </td>
-
-                   <td width="50%">
-                        <h2>HarmlessBird</h2>
+                    <td width="50%"> 
+                        <a class="tbutton" href="https://en.pronouns.page/@harmlessbird">Pronouns and Terms</a><br>
+                        <a class="button" href="https://discord.com/users/384079198731501578/">Discord</a><br>
+                        <a class="button" href="https://open.spotify.com/user/theninjabros?si=0eda13851b1b4208">Spotify</a><br>
+                        <a class="button" href="https://github.com/HarmfulBird">Github</a><br>
                     </td>
 
                     <td width="25%">
-
                     </td>
                 </tr>
         </table>
@@ -55,13 +45,11 @@
     <br>
     <br>
     <br>
-    <!-- Grab the Footer information from "HTML/footer.html"-->
-    <div id="footer"><p></p></div>
-      
-    
-    <!-- Script to make the "scroll to top" button work -->
+    <!--<div class="footer">
+        <p>HarmlessBird | Copyright &copy; 2022</p>
+    </div>-->
+
     <script>
-        // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function() {scrollFunction()};
             
         function scrollFunction() {
@@ -71,8 +59,6 @@
                 document.getElementById("myBtn").style.display = "none";
             }
         }
-            
-        // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
