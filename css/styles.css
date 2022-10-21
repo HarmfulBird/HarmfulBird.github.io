@@ -1,7 +1,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
-    background-image: url('/assets/Leaves.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/Leaves.jpg');
     background-color: #ffffff;
     margin: 0%;
 }
