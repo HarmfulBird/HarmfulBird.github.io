@@ -24,10 +24,13 @@ header{
     min-height:70px;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 70px;
     font-size: 80px;
     text-align: center;
-    text-shadow: 5px 4px #EB83AF;
+    text-shadow: 5px 4px 3px #EB83AF;
     vertical-align: middle;
+    flex-wrap: wrap;
 }
 
 .avatar {
@@ -53,47 +56,26 @@ header{
 
 a.button {
     background-color: #EB83AFBB;
-    background-image: url('/assets/Backdrop.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(to bottom right, #EB83AF, #ff5280);
     border: none;
     color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     padding: 10px;
-    padding-left: 15%;
-    padding-right: 15%;
-    width: 40%;
+    width: 70%;
     flex: 1 1 0px;
+    overflow-wrap: break-word;
     font-size: 40px;
     margin-top: 30px;
     border-radius: 12px;
 }
 
-a.button:hover, a.tbutton:hover {
-    opacity: 0.8;
-}
 
-a.tbutton {
-    background-color: #EB83AFBB;
-    background-image: url('/assets/Backdrop.png');
+a.button:hover {
+    background: linear-gradient(to bottom right, #ff5280AA, #EB83AFAA);
     background-repeat: no-repeat;
     background-size: cover;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap;
-    display: inline-block;
-    padding: 10px;
-    padding-left: 15%;
-    padding-right: 15%;
-    width: 40%;
-    flex: 1 1 0px;
-    font-size: 40px;
-    margin-top: 80px;
-    border-radius: 12px;
 }
 
 .icons {
