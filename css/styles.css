@@ -53,6 +53,15 @@ header{
     padding-left: 15px;
 }
 
+p{
+    background-color: #EB83AFBB;
+    background: linear-gradient(to bottom right,#5ea1e4, #ff5280);
+    border-radius: 12px;
+    padding: 30px;
+    color: #FFFFFF;
+    font-size: 30px; 
+    margin-top: 0px;
+}
 
 a.button {
     background-color: #EB83AFBB;
@@ -66,8 +75,8 @@ a.button {
     width: 70%;
     flex: 1 1 0px;
     overflow-wrap: break-word;
-    font-size: 40px;
-    margin-top: 30px;
+    font-size: 35px;
+    margin-top: 25px;
     border-radius: 12px;
 }
 
