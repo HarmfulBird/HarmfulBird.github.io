@@ -93,7 +93,7 @@ a.button {
 
 @media screen and (min-width: 450px) {
     a.button {
-        width: 45%;
+        width: 40%;
     }
     
 }
