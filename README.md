@@ -14,7 +14,7 @@ to different social media.
 
 Hewwo!
 
-I'm Cedar, but you can call me Bird,  
+You can call me Bird,  
 I am a 19-year-old trans student studying at university in New Zealand.  
 
 While I find peace while observing the beauty of birds, lose myself in gaming, and thrive on the creativity of coding.  
