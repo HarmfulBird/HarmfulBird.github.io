@@ -25,6 +25,7 @@
     }
     
     .page-1 {
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
         background-image: var(--bg-image);
     }
 
