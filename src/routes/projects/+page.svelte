@@ -49,7 +49,7 @@
       description: 'A custom desgined 3D printed case for my TS100 soldering iron, it fetures storage for tips & cables, it also has a stand to hold the iron when hot',
       technologies: ['3D Printing', 'CAD'],
       status: 'Completed ✅',
-      image: '/case.png'
+      image: `${base}/case.png`
     },
     {
       title: 'Nest Table',
