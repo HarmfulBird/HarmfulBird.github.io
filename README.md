@@ -24,4 +24,9 @@ Let's chat about birds, games, code, or anything else that sparks your curiosity
 
 ## License
 
+<<<<<<< HEAD
 [Apache-2.0](https://choosealicense.com/licenses/apache-2.0/)
+=======
+[Apache-2.0](https://choosealicense.com/licenses/apache-2.0/)
+
+>>>>>>> d4c304f9a0bbca005d832c8104047f728a3585a5
