@@ -1,5 +1,6 @@
 <!-- +error.svelte -->
 <script>
+  import { base } from '$app/paths';
   import { page } from '$app/stores';
   import HamburgerMenu from '$lib/HamburgerMenu.svelte';
 </script>
@@ -65,7 +66,7 @@
         </p>
 
         <!-- Navigation Button -->
-        <a href="/" 
+        <a href="{base}/" 
            class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl px-8 py-4 text-white font-bold text-xl transition-all duration-300">
             <span class="text-with-border">← Back to Home</span>
         </a>

@@ -1,5 +1,6 @@
 <!-- HamburgerMenu.svelte -->
 <script>
+  import { base } from '$app/paths';
   let isOpen = false;
 
   function toggleMenu() {
@@ -38,16 +39,16 @@
   {#if isOpen}
     <div class="menu-dropdown absolute top-16 right-0 bg-zinc-800 rounded-xl shadow-2xl border border-zinc-600 min-w-48 overflow-hidden">
       <nav class="py-2">
-        <a href="/" on:click={closeMenu} class="menu-item block px-4 py-3 text-white hover:bg-zinc-700 transition-colors duration-200">
+        <a href="{base}/" on:click={closeMenu} class="menu-item block px-4 py-3 text-white hover:bg-zinc-700 transition-colors duration-200">
           Home
         </a>
-        <a href="/about" on:click={closeMenu} class="menu-item block px-4 py-3 text-white hover:bg-zinc-700 transition-colors duration-200">
+        <a href="{base}/about" on:click={closeMenu} class="menu-item block px-4 py-3 text-white hover:bg-zinc-700 transition-colors duration-200">
           About
         </a>
-        <a href="/projects" on:click={closeMenu} class="menu-item block px-4 py-3 text-white hover:bg-zinc-700 transition-colors duration-200">
+        <a href="{base}/projects" on:click={closeMenu} class="menu-item block px-4 py-3 text-white hover:bg-zinc-700 transition-colors duration-200">
           Projects
         </a>
-        <a href="/contact" on:click={closeMenu} class="menu-item block px-4 py-3 text-white hover:bg-zinc-700 transition-colors duration-200">
+        <a href="{base}/contact" on:click={closeMenu} class="menu-item block px-4 py-3 text-white hover:bg-zinc-700 transition-colors duration-200">
           Contact
         </a>
       </nav>

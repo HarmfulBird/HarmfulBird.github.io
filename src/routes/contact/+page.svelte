@@ -222,13 +222,13 @@
             <div class="max-w-6xl mx-auto">
                 <div class="flex flex-col md:flex-row gap-12 justify-center items-center">
                 <!-- Home Button -->
-                <a href="/" 
+                <a href="{base}/" 
                     class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                     <span class="text-with-border relative z-10">Home</span>
                 </a>
 
                 <!-- More About Me Button -->
-                <a href="/about" 
+                <a href="{base}/about" 
                     class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                     <div class="absolute inset-0 opacity-30">
                         <img src="{base}/avatar.png" alt="Avatar" class="w-full h-full object-cover" />
@@ -237,7 +237,7 @@
                 </a>
 
                 <!-- My Projects Button -->
-                <a href="/projects" 
+                <a href="{base}/projects" 
                     class="nav-button bg-zinc-600 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                     <div class="absolute inset-0 opacity-40">
                         <img src="{base}/projects-button.png" alt="Code on the background" class="w-full h-full object-cover" />
