@@ -25,8 +25,7 @@
     }
     
     .page-1 {
-        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
-        background-image: var(--bg-image);
+        background: linear-gradient(rgba(5, 5, 10, 0.7), rgba(0, 0, 0, 0.5)), url('/endless-constellation.svg');
     }
 
     .nav-button {
@@ -67,7 +66,7 @@
     }
 </style>
 
-<div class="page-1 bg-zinc-800 text-white min-h-screen" style="--bg-image: url('{base}/endless-constellation.svg')">
+<div class="page-1 bg-zinc-800 text-white min-h-screen">
     <div class="h-15"></div>
     <!-- Hamburger Menu -->
     <HamburgerMenu />
