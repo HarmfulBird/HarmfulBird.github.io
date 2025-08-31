@@ -1,5 +1,6 @@
 <!-- +page.svelte -->
 <script>
+  import { base } from '$app/paths';
   import HamburgerMenu from '$lib/HamburgerMenu.svelte';
   
   // Function to generate consistent colors for technologies
@@ -34,7 +35,7 @@
       description: 'A custom-built smart lamp using ESP32 and WLED. Features RGB lighting, WiFi connectivity, and integration with home automation systems through wled.',
       technologies: ['ESP32', 'WLED', 'IoT', 'Hardware'],
       status: 'Completed ✅',
-      image: '/catlamp1.png'
+      image: `${base}/catlamp1.png`
     },
     {
       title: 'Portfolio Website',
@@ -203,7 +204,7 @@
                 <a href="/about" 
                     class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                     <div class="absolute inset-0 opacity-30">
-                        <img src="/avatar.png" alt="Avatar" class="w-full h-full object-cover" />
+                        <img src="{base}/avatar.png" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
                     <span class="text-with-border relative z-10">More About Me!</span>
                 </a>
@@ -212,7 +213,7 @@
                 <a href="/contact" 
                     class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                     <div class="absolute inset-0 opacity-30">
-                        <img src="/contact-me.png" alt="Contact Me" class="w-full h-full object-cover" />
+                        <img src="{base}/contact-me.png" alt="Contact Me" class="w-full h-full object-cover" />
                     </div>
                     <span class="text-with-border relative z-10">Contact Me</span>
                 </a>

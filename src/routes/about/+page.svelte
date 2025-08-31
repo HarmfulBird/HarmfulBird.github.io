@@ -1,5 +1,6 @@
 <!-- +page.svelte -->
 <script>
+  import { base } from '$app/paths';
   import HamburgerMenu from '$lib/HamburgerMenu.svelte';
   // About page logic
 </script>
@@ -24,7 +25,8 @@
     }
     
     .page-1 {
-        background: linear-gradient(rgba(5, 5, 10, 0.7), rgba(0, 0, 0, 0.5)), url('/endless-constellation.svg');
+        background: linear-gradient(rgba(5, 5, 10, 0.7), rgba(0, 0, 0, 0.5));
+        background-image: var(--bg-image);
     }
 
     .nav-button {
@@ -65,7 +67,7 @@
     }
 </style>
 
-<div class="page-1 bg-zinc-800 text-white min-h-screen">
+<div class="page-1 bg-zinc-800 text-white min-h-screen" style="--bg-image: url('{base}/endless-constellation.svg')">
     <div class="h-15"></div>
     <!-- Hamburger Menu -->
     <HamburgerMenu />
@@ -79,7 +81,7 @@
             
             <!-- Floating sidebar with avatar and quick facts -->
             <div class="floating-sidebar">
-                <img src="/avatar.png" alt="Avery avatar variant" class="w-full h-auto mb-4 rounded-xl" />
+                <img src="{base}/avatar.png" alt="Avery avatar variant" class="w-full h-auto mb-4 rounded-xl" />
                 
                 <div class="bg-zinc-700 rounded-xl p-6">
                     <h3 class="text-xl md:text-2xl mb-4">Quick Facts</h3>
@@ -137,7 +139,7 @@
                 <a href="/projects" 
                    class="nav-button bg-zinc-600 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                    <div class="absolute inset-0 opacity-40">
-                        <img src="/projects-button.png" alt="Code on the background" class="w-full h-full object-cover" />
+                        <img src="{base}/projects-button.png" alt="Code on the background" class="w-full h-full object-cover" />
                     </div>
                     <span class="text-with-border relative z-10">My Projects</span>
                 </a>
@@ -146,7 +148,7 @@
                 <a href="/contact" 
                     class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                     <div class="absolute inset-0 opacity-30">
-                        <img src="/contact-me.png" alt="Contact Me" class="w-full h-full object-cover" />
+                        <img src="{base}/contact-me.png" alt="Contact Me" class="w-full h-full object-cover" />
                     </div>
                     <span class="text-with-border relative z-10">Contact Me</span>
                 </a>

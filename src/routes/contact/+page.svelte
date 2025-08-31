@@ -1,12 +1,13 @@
 <!-- +page.svelte -->
 <script>
+  import { base } from '$app/paths';
   import HamburgerMenu from '$lib/HamburgerMenu.svelte';
 
   // Contact page logic
   const contactMethods = [
     {
       name: 'Discord',
-      icon: '/icons/discord.svg',
+      icon: `${base}/icons/discord.svg`,
       url: 'https://discord.com/users/384079198731501578/',
       description: 'Best way to reach me for quick chats and discussions',
       handle: '@HarmlessBird'
@@ -20,7 +21,7 @@
     },
     {
       name: 'Telegram',
-      icon: '/icons/Telegram.svg',
+      icon: `${base}/icons/Telegram.svg`,
       url: 'https://t.me/HarmlessBird',
       description: 'Secure messaging and quick communication',
       handle: '@HarmlessBird'
@@ -34,49 +35,49 @@
     },
     {
       name: 'Instagram',
-      icon: '/icons/Instagram.svg',
+      icon: `${base}/icons/Instagram.svg`,
       url: 'https://www.instagram.com/harmless.bird/',
       description: 'Random photos from my life',
       handle: '@harmless.bird'
     },
     {
       name: 'Twitter',
-      icon: '/icons/Twitter.svg',
+      icon: `${base}/icons/Twitter.svg`,
       url: 'https://twitter.com/Harmless_Bird',
       description: 'Quick updates and thoughts',
       handle: '@Harmless_Bird'
     },
     {
       name: 'YouTube',
-      icon: '/icons/Youtube.svg',
+      icon: `${base}/icons/Youtube.svg`,
       url: 'https://www.youtube.com/channel/UCi7pLC3NC-LvrgQER1fNvyQ',
       description: 'I don\'t post anything but feel free to subscribe!',
       handle: '@HarmlessBird'
     },
     {
       name: 'Twitch',
-      icon: '/icons/Twitch.svg',
+      icon: `${base}/icons/Twitch.svg`,
       url: 'https://www.twitch.tv/harmlessbirb',
       description: 'Once in a while streams (very casual)',
       handle: '@harmlessbirb'
     },
     {
       name: 'TikTok',
-      icon: '/icons/tiktok.svg',
+      icon: `${base}/icons/tiktok.svg`,
       url: 'https://www.tiktok.com/@harmlessbird',
       description: 'I just watch videos but feel free to follow me!',
       handle: '@harmlessbird'
     },
     {
       name: 'Snapchat',
-      icon: '/icons/Snapchat.svg',
+      icon: `${base}/icons/Snapchat.svg`,
       url: 'https://www.snapchat.com/add/harmless.birb?share_id=inEb3mFVH08&locale=en-NZ',
       description: 'I don\'t use it much, but feel free to add me!',
       handle: '@harmless.birb'
     },
     {
       name: 'Spotify',
-      icon: '/icons/Spotify.svg',
+      icon: `${base}/icons/Spotify.svg`,
       url: 'https://open.spotify.com/user/theninjabros',
       description: 'Check out my playlists and music taste',
       handle: '@Harmless_Bird'
@@ -230,7 +231,7 @@
                 <a href="/about" 
                     class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                     <div class="absolute inset-0 opacity-30">
-                        <img src="/avatar.png" alt="Avatar" class="w-full h-full object-cover" />
+                        <img src="{base}/avatar.png" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
                     <span class="text-with-border relative z-10">More About Me!</span>
                 </a>
@@ -239,7 +240,7 @@
                 <a href="/projects" 
                     class="nav-button bg-zinc-600 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                     <div class="absolute inset-0 opacity-40">
-                        <img src="/projects-button.png" alt="Code on the background" class="w-full h-full object-cover" />
+                        <img src="{base}/projects-button.png" alt="Code on the background" class="w-full h-full object-cover" />
                     </div>
                     <span class="text-with-border relative z-10">My Projects</span>
                 </a>

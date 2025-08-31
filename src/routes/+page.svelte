@@ -1,5 +1,6 @@
 <!-- +page.svelte -->
 <script>
+  import { base } from '$app/paths';
   import HamburgerMenu from '$lib/HamburgerMenu.svelte';
   // You can add any component logic here
 </script>
@@ -24,7 +25,8 @@
     }
     
     .page-1 {
-        background: linear-gradient(rgba(5, 5, 10, 0.7), rgba(0, 0, 0, 0.5)), url('/endless-constellation.svg');
+        background: linear-gradient(rgba(5, 5, 10, 0.7), rgba(0, 0, 0, 0.5));
+        background-image: var(--bg-image);
     }
 
     .custom-list {
@@ -61,14 +63,14 @@
     }
 </style>
 
-<div class="page-1 bg-zinc-800 text-white">
+<div class="page-1 bg-zinc-800 text-white" style="--bg-image: url('{base}/endless-constellation.svg')">
     <!-- Hamburger Menu -->
     <HamburgerMenu />
     
     <!-- Avatar Image that scrolls with page -->
     <div class="absolute bottom-0 left-0 z-10 hidden lg:block">
         <img 
-        src="/avatar.png" 
+        src="{base}/avatar.png" 
         alt="Avery avatar" 
         class="max-w-200 w-full h-auto"
         />
@@ -90,7 +92,7 @@
         <!-- Mobile avatar - shows only on small screens -->
         <div class="lg:hidden mt-8 flex justify-center">
             <img 
-            src="/avatar.png" 
+            src="{base}/avatar.png" 
             alt="Avery avatar" 
             class="max-w-s w-full h-auto"
             />
@@ -118,7 +120,7 @@
             <!-- Right Image -->
             <div class="flex-1 flex justify-center">
                 <img 
-                src="/case.png" 
+                src="{base}/case.png" 
                 alt="Case with Avery logo" 
                 class="max-w-300 w-full h-auto"
                 />
@@ -221,7 +223,7 @@
             <!-- Right Image -->
             <div class="flex-1 flex justify-center">
                 <img 
-                src="/catlamp1.png" 
+                src="{base}/catlamp1.png" 
                 alt="The insides of a led lamp" 
                 class="max-w-300 w-full h-auto"
                 />
@@ -240,7 +242,7 @@
                 <a href="/about" 
                     class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                     <div class="absolute inset-0 opacity-30">
-                        <img src="/avatar.png" alt="Avatar" class="w-full h-full object-cover" />
+                        <img src="{base}/avatar.png" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
                     <span class="text-with-border relative z-10">More About Me!</span>
                 </a>
@@ -249,7 +251,7 @@
                 <a href="/projects" 
                    class="nav-button bg-zinc-600 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                    <div class="absolute inset-0 opacity-40">
-                        <img src="/projects-button.png" alt="Code on the background" class="w-full h-full object-cover" />
+                        <img src="{base}/projects-button.png" alt="Code on the background" class="w-full h-full object-cover" />
                     </div>
                     <span class="text-with-border relative z-10">My Projects</span>
                 </a>
@@ -258,7 +260,7 @@
                 <a href="/contact" 
                     class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                     <div class="absolute inset-0 opacity-30">
-                        <img src="/contact-me.png" alt="Contact Me" class="w-full h-full object-cover" />
+                        <img src="{base}/contact-me.png" alt="Contact Me" class="w-full h-full object-cover" />
                     </div>
                     <span class="text-with-border relative z-10">Contact Me</span>
                 </a>
