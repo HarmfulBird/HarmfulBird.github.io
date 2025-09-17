@@ -14,8 +14,8 @@ to different social media.
 
 Hewwo!
 
-You can call me Bird,  
-I am a 19-year-old student studying at university in New Zealand.  
+You can call me Avery or Bird,  
+I am a 20-year-old recent graduate in New Zealand.  
 
 While I find peace while observing the beauty of birds, lose myself in gaming, and thrive on the creativity of coding.  
 I am also an advocate for inclusivity and love collecting squishmallows. 
