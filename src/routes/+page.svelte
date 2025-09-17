@@ -18,7 +18,7 @@
         font-weight: 700;
     }
 
-    h1, p {
+    h1, p, .listy, li{
         text-shadow: 
         4px 4px 4px rgba(0, 0, 0, 0.8),
         2px 2px 1px rgba(0, 0, 0, 0.8);
@@ -75,6 +75,9 @@
         />
     </div>
 
+    <!-- Gap between sections -->
+    <div class="h-15"></div>
+
     <!-- First Section - Welcome -->
     <div class="min-h-screen flex items-center justify-center ml-auto mr-auto max-w-4xl lg:pl-120 p-8">
         <div class="text-white max-w-2xl">
@@ -91,7 +94,7 @@
         <!-- Mobile avatar - shows only on small screens -->
         <div class="lg:hidden mt-8 flex justify-center">
             <img 
-            src="{base}/avatar.png" 
+            src="/avatar.png" 
             alt="Avery avatar" 
             class="max-w-s w-full h-auto"
             />
@@ -119,7 +122,7 @@
             <!-- Right Image -->
             <div class="flex-1 flex justify-center">
                 <img 
-                src="{base}/case.png" 
+                src="/case.png" 
                 alt="Case with Avery logo" 
                 class="max-w-300 w-full h-auto"
                 />
@@ -153,7 +156,7 @@
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-start gap-12">
             <!-- Left Text -->
             <div class="flex-1 lg:pr-20">
-                <div class="text-xl md:text-2xl lg:text-3xl mb-4 leading-relaxed">
+                <div class="text-xl md:text-2xl lg:text-3xl mb-4 leading-relaxed listy">
                     Other Frameworks/Languages I've used include:
                     <ul class="custom-list pl-8">
                         <li>Bootstrap CSS</li>
@@ -168,7 +171,7 @@
 
             <!-- Right Text -->
             <div class="flex-1">
-                <div class="text-xl md:text-2xl lg:text-3xl mb-4 leading-relaxed">
+                <div class="text-xl md:text-2xl lg:text-3xl mb-4 leading-relaxed listy">
                     And some that I've had minimal experience with:
                     <ul class="custom-list pl-8">
                         <li>Angular</li>
@@ -189,18 +192,18 @@
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-start gap-12">
             <!-- Left Text -->
             <div class="flex-1 lg:pr-20">
-                <div class="text-xl md:text-2xl lg:text-3xl mb-4 leading-relaxed">
+                <p class="text-xl md:text-2xl lg:text-3xl mb-4 leading-relaxed">
                     I got into development & design all the way back in early high school when a classmate was showing me how to create a basic website using HTML. From that moment on it never left my mind and I knew exactly what I wanted to do. 
-                </div>
+                </p>
             </div>
         </div>
         <div class="h-15"></div>
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-start gap-12">
             <!-- Left Text -->
             <div class="flex-1 lg:pr-20">
-                <div class="text-xl md:text-2xl lg:text-3xl mb-4 leading-relaxed">
+                <p class="text-xl md:text-2xl lg:text-3xl mb-4 leading-relaxed">
                     I tend to work the best in a quiet space where I can get on with my work without distractions, but with the option to get help if I need it.I like to bring my curiosity and problem solving skills to every project that comes my way. 
-                </div>
+                </p>
             </div>
         </div>  
     </div>
@@ -222,7 +225,7 @@
             <!-- Right Image -->
             <div class="flex-1 flex justify-center">
                 <img 
-                src="{base}/catlamp1.png" 
+                src="/catlamp1.png" 
                 alt="The insides of a led lamp" 
                 class="max-w-300 w-full h-auto"
                 />
@@ -238,28 +241,28 @@
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row gap-12 justify-center items-center">
                 <!-- More About Me Button -->
-                <a href="{base}/about" 
+                <a href="/about" 
                     class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                     <div class="absolute inset-0 opacity-30">
-                        <img src="{base}/avatar.png" alt="Avatar" class="w-full h-full object-cover" />
+                        <img src="/avatar.png" alt="Avatar" class="w-full h-full object-cover" />
                     </div>
                     <span class="text-with-border relative z-10">More About Me!</span>
                 </a>
 
                 <!-- My Projects Button -->
-                <a href="{base}/projects" 
+                <a href="/projects" 
                    class="nav-button bg-zinc-600 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                    <div class="absolute inset-0 opacity-40">
-                        <img src="{base}/projects-button.png" alt="Code on the background" class="w-full h-full object-cover" />
+                        <img src="/projects-button.png" alt="Code on the background" class="w-full h-full object-cover" />
                     </div>
                     <span class="text-with-border relative z-10">My Projects</span>
                 </a>
 
                 <!-- Contact Me Button -->
-                <a href="{base}/contact" 
+                <a href="/contact" 
                     class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
                     <div class="absolute inset-0 opacity-30">
-                        <img src="{base}/contact-me.png" alt="Contact Me" class="w-full h-full object-cover" />
+                        <img src="/contact-me.png" alt="Contact Me" class="w-full h-full object-cover" />
                     </div>
                     <span class="text-with-border relative z-10">Contact Me</span>
                 </a>

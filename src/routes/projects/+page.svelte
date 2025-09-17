@@ -2,6 +2,11 @@
 <script>
   import { base } from '$app/paths';
   import HamburgerMenu from '$lib/HamburgerMenu.svelte';
+  import ProjectModal from '$lib/ProjectModal.svelte';
+  
+  // Modal state
+  let isModalOpen = false;
+  let selectedProject = null;
   
   // Function to generate consistent colors for technologies
   function getTechColor(techName) {
@@ -31,48 +36,80 @@
   // Projects data
   const projects = [
     {
+      id: 'esp32-lamp',
       title: 'ESP32 Smart Lamp',
+      shortDescription: 'A custom-built smart lamp using ESP32 and WLED. Features RGB lighting, WiFi connectivity, and integration with home automation systems through wled.',
       description: 'A custom-built smart lamp using ESP32 and WLED. Features RGB lighting, WiFi connectivity, and integration with home automation systems through wled.',
+      images: [
+        `${base}/catlamp1.png`
+      ],
       technologies: ['ESP32', 'WLED', 'IoT', 'Hardware'],
       status: 'Completed ✅',
-      image: `${base}/catlamp1.png`
+      links: []
     },
     {
+      id: 'portfolio-website',
       title: 'Portfolio Website',
+      shortDescription: 'This very website! My first proper website built with SvelteKit and Tailwind CSS.',
       description: 'This very website! My first proper website built with SvelteKit and Tailwind CSS.',
+      images: [],
       technologies: ['SvelteKit', 'Tailwind CSS'],
       status: 'In Progress 🚧',
-      image: null
+      links: []
     },
     {
+      id: 'soldering-iron-case',
       title: 'Custom Soldering Iron Case',
+      shortDescription: 'A custom desgined 3D printed case for my TS100 soldering iron, it fetures storage for tips & cables, it also has a stand to hold the iron when hot',
       description: 'A custom desgined 3D printed case for my TS100 soldering iron, it fetures storage for tips & cables, it also has a stand to hold the iron when hot',
+      images: [
+        `${base}/case.png`
+      ],
       technologies: ['3D Printing', 'CAD'],
       status: 'Completed ✅',
-      image: `${base}/case.png`
+      links: []
     },
     {
+      id: 'nest-table',
       title: 'Nest Table',
+      shortDescription: 'A simple Flutter based app made for a course project that is for managing reservations, orders, and seating in a restaurant environment. It features real-time updates and an intuitive UI.',
       description: 'A simple Flutter based app made for a course project that is for managing reservations, orders, and seating in a restaurant environment. It features real-time updates and an intuitive UI.',
+      images: [],
       technologies: ['Flutter', 'Dart', 'Mobile', 'Cross-platform'],
       status: 'Completed ✅',
-      image: null
+      links: []
     },
     {
+      id: 'study-web-development',
       title: 'Study Web Development Portfolio',
+      shortDescription: 'Collection of websites built during my learning journey, showcasing various projects and experiments from learning how to code. I am happy to show these off as they represent my growth and learning in web development.',
       description: 'Collection of websites built during my learning journey, showcasing various projects and experiments from learning how to code. I am happy to show these off as they represent my growth and learning in web development.',
+      images: [],
       technologies: ['html', 'CSS', 'JavaScript', 'PHP', 'mongoDB'],
       status: 'Completed ✅',
-      image: null
+      links: []
     },
     {
+      id: 'usb-c-laptop-upgrade',
       title: 'USB-C Laptop Upgrade',
+      shortDescription: 'A project upgrading my laptop to support USB-C PD charging by modifying the case and soldering in a USB-C port to the motherboard.',
       description: 'A project upgrading my laptop to support USB-C PD charging by modifying the case and soldering in a USB-C port to the motherboard.',
+      images: [],
       technologies: ['USB-C', 'Hardware', 'Soldering'],
       status: 'Completed ✅',
-      image: null
-    },
+      links: []
+    }
   ];
+  
+  function openModal(project) {
+    selectedProject = project;
+    isModalOpen = true;
+  }
+  
+  function closeModal() {
+    isModalOpen = false;
+    selectedProject = null;
+  }
 </script>
 
 <svelte:head>
@@ -88,7 +125,7 @@
         font-weight: 700;
     }
 
-    h1, h3, p {
+    h1, h3 {
         text-shadow: 
         4px 4px 4px rgba(0, 0, 0, 0.8),
         2px 2px 1px rgba(0, 0, 0, 0.8);
@@ -98,32 +135,24 @@
         background: linear-gradient(rgba(5, 5, 10, 0.7), rgba(0, 0, 0, 0.5)), url('/endless-constellation.svg');
     }
 
+    .back-button {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
     .project-card {
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         transition: all 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        min-height: 280px;
     }
 
     .project-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-    }
-
-    .project-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .project-header {
-        flex: 1;
-    }
-
-    .project-footer {
-        margin-top: auto;
-        padding-top: 1rem;
     }
 
     .nav-button {
@@ -150,45 +179,56 @@
 </style>
 
 <div class="page-1 bg-zinc-800 text-white min-h-screen">
-    <div class="h-15"></div>
     <!-- Hamburger Menu -->
     <HamburgerMenu />
-
+    
+    <!-- Back button -->
+    <div class="p-8">
+        <a href="{base}/" 
+           class="back-button bg-zinc-700 hover:bg-zinc-600 rounded-xl px-6 py-3 inline-flex items-center text-white font-bold transition-all duration-300">
+            ← Back to Home
+        </a>
+    </div>
     <!-- Main Content -->
     <div class="p-8 max-w-6xl mx-auto">
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-12 text-center">My Projects</h1>
         
         <!-- Projects Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
             {#each projects as project}
-            <div class="project-card bg-zinc-700 rounded-2xl p-6 relative overflow-hidden">
-                <div class="project-content relative z-10">
-                    <div class="project-header">
-                        <h3 class="text-2xl md:text-3xl mb-4">{project.title}</h3>
-                        <p class="text-lg mb-4 leading-relaxed">
-                            {project.description}
-                        </p>
-                    </div>
-                    <div class="project-footer">
-                        <div class="flex flex-wrap gap-2 mb-3">
-                            {#each project.technologies as tech}
+            <!-- Project Card -->
+            <button 
+                class="project-card bg-zinc-700 rounded-2xl p-6 relative overflow-hidden text-left w-full hover:cursor-pointer"
+                on:click={() => openModal(project)}
+            >
+                <div class="relative z-10">
+                    <h3 class="text-2xl md:text-3xl mb-4">{project.title}</h3>
+                    <p class="text-lg mb-4 leading-relaxed">
+                        {project.shortDescription}
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        {#each project.technologies as tech}
                             <span class="{getTechColor(tech)} px-3 py-1 rounded-full text-sm">{tech}</span>
-                            {/each}
-                        </div>
-                        <div>
-                            <span class="text-sm text-zinc-300">Status: {project.status}</span>
-                        </div>
+                        {/each}
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-sm text-zinc-300">Status: {project.status}</span>
+                    </div>
+                    <div class="mt-2">
+                        <span class="text-sm text-blue-400">Click to view details →</span>
                     </div>
                 </div>
-                {#if project.image}
-                <div class="absolute bottom-4 right-4 opacity-50">
-                    <img src={project.image} alt={project.title} class="max-w-40 max-h-30 object-cover rounded-lg" />
-                </div>
+                {#if project.images && project.images.length > 0}
+                    <div class="absolute bottom-4 right-4 opacity-50">
+                        <img src={project.images[0]} alt={project.title} class="w-20 h-20 object-cover rounded-lg" />
+                    </div>
                 {/if}
-            </div>
+            </button>
             {/each}
+
+            </div>
         </div>
-    </div>
     
         <!-- Navigation Buttons Section -->
         <div class="p-8 pb-16">
@@ -234,3 +274,10 @@
         </p>
     </footer>
 </div>
+
+<!-- Project Modal -->
+<ProjectModal 
+    bind:isOpen={isModalOpen} 
+    project={selectedProject} 
+    on:close={closeModal}
+/>

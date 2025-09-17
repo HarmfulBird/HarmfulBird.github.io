@@ -8,6 +8,10 @@
     {
       name: 'Discord',
       icon: `${base}/icons/discord.svg`,
+      iconType: 'svg',
+      bgColor: 'bg-indigo-600',
+      textColor: 'text-indigo-400',
+      hoverColor: 'hover:text-indigo-300',
       url: 'https://discord.com/users/384079198731501578/',
       description: 'Best way to reach me for quick chats and discussions',
       handle: '@HarmlessBird'
@@ -15,6 +19,10 @@
     {
       name: 'Email',
       icon: '📧',
+      iconType: 'emoji',
+      bgColor: 'bg-blue-600',
+      textColor: 'text-blue-400',
+      hoverColor: 'hover:text-blue-300',
       url: 'mailto:Avery@FluffyTech.co.nz',
       description: 'For formal inquiries',
       handle: 'Avery@FluffyTech.co.nz'
@@ -22,6 +30,10 @@
     {
       name: 'Telegram',
       icon: `${base}/icons/Telegram.svg`,
+      iconType: 'svg',
+      bgColor: 'bg-sky-500',
+      textColor: 'text-sky-400',
+      hoverColor: 'hover:text-sky-300',
       url: 'https://t.me/HarmlessBird',
       description: 'Secure messaging and quick communication',
       handle: '@HarmlessBird'
@@ -29,6 +41,10 @@
     {
       name: 'GitHub',
       icon: '🐙',
+      iconType: 'emoji',
+      bgColor: 'bg-gray-600',
+      textColor: 'text-gray-400',
+      hoverColor: 'hover:text-gray-300',
       url: 'https://github.com/HarmfulBird',
       description: 'Check out my code',
       handle: 'github.com/HarmfulBird'
@@ -36,6 +52,10 @@
     {
       name: 'Instagram',
       icon: `${base}/icons/Instagram.svg`,
+      iconType: 'svg',
+      bgColor: 'bg-gradient-to-r from-purple-500 to-pink-500',
+      textColor: 'text-pink-400',
+      hoverColor: 'hover:text-pink-300',
       url: 'https://www.instagram.com/harmless.bird/',
       description: 'Random photos from my life',
       handle: '@harmless.bird'
@@ -43,6 +63,10 @@
     {
       name: 'Twitter',
       icon: `${base}/icons/Twitter.svg`,
+      iconType: 'svg',
+      bgColor: 'bg-sky-400',
+      textColor: 'text-sky-400',
+      hoverColor: 'hover:text-sky-300',
       url: 'https://twitter.com/Harmless_Bird',
       description: 'Quick updates and thoughts',
       handle: '@Harmless_Bird'
@@ -50,6 +74,10 @@
     {
       name: 'YouTube',
       icon: `${base}/icons/Youtube.svg`,
+      iconType: 'svg',
+      bgColor: 'bg-red-600',
+      textColor: 'text-red-400',
+      hoverColor: 'hover:text-red-300',
       url: 'https://www.youtube.com/channel/UCi7pLC3NC-LvrgQER1fNvyQ',
       description: 'I don\'t post anything but feel free to subscribe!',
       handle: '@HarmlessBird'
@@ -57,6 +85,10 @@
     {
       name: 'Twitch',
       icon: `${base}/icons/Twitch.svg`,
+      iconType: 'svg',
+      bgColor: 'bg-purple-600',
+      textColor: 'text-purple-400',
+      hoverColor: 'hover:text-purple-300',
       url: 'https://www.twitch.tv/harmlessbirb',
       description: 'Once in a while streams (very casual)',
       handle: '@harmlessbirb'
@@ -64,6 +96,10 @@
     {
       name: 'TikTok',
       icon: `${base}/icons/tiktok.svg`,
+      iconType: 'svg',
+      bgColor: 'bg-black',
+      textColor: 'text-gray-300',
+      hoverColor: 'hover:text-white',
       url: 'https://www.tiktok.com/@harmlessbird',
       description: 'I just watch videos but feel free to follow me!',
       handle: '@harmlessbird'
@@ -71,6 +107,10 @@
     {
       name: 'Snapchat',
       icon: `${base}/icons/Snapchat.svg`,
+      iconType: 'svg-dark',
+      bgColor: 'bg-yellow-400',
+      textColor: 'text-yellow-400',
+      hoverColor: 'hover:text-yellow-300',
       url: 'https://www.snapchat.com/add/harmless.birb?share_id=inEb3mFVH08&locale=en-NZ',
       description: 'I don\'t use it much, but feel free to add me!',
       handle: '@harmless.birb'
@@ -78,6 +118,10 @@
     {
       name: 'Spotify',
       icon: `${base}/icons/Spotify.svg`,
+      iconType: 'svg',
+      bgColor: 'bg-green-500',
+      textColor: 'text-green-400',
+      hoverColor: 'hover:text-green-300',
       url: 'https://open.spotify.com/user/theninjabros',
       description: 'Check out my playlists and music taste',
       handle: '@Harmless_Bird'
@@ -98,7 +142,7 @@
         font-weight: 700;
     }
 
-    h1, h2, h3, p {
+    h1, h3, p {
         text-shadow: 
         4px 4px 4px rgba(0, 0, 0, 0.8),
         2px 2px 1px rgba(0, 0, 0, 0.8);
@@ -164,9 +208,16 @@
 </style>
 
 <div class="page-1 bg-zinc-800 text-white min-h-screen">
-    <div class="h-15"></div>
     <!-- Hamburger Menu -->
     <HamburgerMenu />
+
+    <!-- Back button -->
+    <div class="p-8">
+        <a href="/" 
+           class="back-button bg-zinc-700 hover:bg-zinc-600 rounded-xl px-6 py-3 inline-flex items-center text-white font-bold transition-all duration-300">
+            ← Back to Home
+        </a>
+    </div>
 
     <!-- Main Content -->
     <div class="p-8 max-w-6xl mx-auto">
@@ -186,32 +237,22 @@
             <a href={contact.url} target={contact.url.startsWith('mailto:') ? '' : '_blank'}
                class="contact-card bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 text-white no-underline">
                 <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 flex items-center justify-center icon-container">
-                        {#if contact.icon.startsWith('/icons/')}
-                            <img src={contact.icon} alt={contact.name} class="w-6 h-6 filter brightness-0 invert" />
-                        {:else}
+                    <div class="w-12 h-12 {contact.bgColor} rounded-full flex items-center justify-center icon-container">
+                        {#if contact.iconType === 'emoji'}
                             <span class="text-2xl">{contact.icon}</span>
+                        {:else if contact.iconType === 'svg-dark'}
+                            <img src={contact.icon} alt={contact.name} class="w-6 h-6 filter brightness-0" />
+                        {:else}
+                            <img src={contact.icon} alt={contact.name} class="w-6 h-6 filter brightness-0 invert" />
                         {/if}
                     </div>
                     <h3 class="text-2xl">{contact.name}</h3>
                 </div>
                 <p class="text-lg mb-4">{contact.description}</p>
-                <span class="text-blue-300 hover:text-blue-200 underline cursor-pointer">{contact.handle}</span>
+                <span class="{contact.textColor} {contact.hoverColor} underline cursor-pointer">{contact.handle}</span>
             </a>
             {/each}
 
-        </div>
-
-        <!-- Gap between sections -->
-        <div class="h-32"></div>
-
-        <!-- Call to Action -->
-        <div class="text-center bg-zinc-700 rounded-2xl p-8">
-            <h2 class="text-3xl md:text-4xl mb-4">Let's Build Something Together!</h2>
-            <p class="text-lg md:text-xl mb-6 leading-relaxed">
-                I'm always excited about new projects and opportunities to learn. <br><br>
-                Or would you rather just chat about tech, life, or anything in between?
-            </p>
         </div>
 
         <!-- Gap between sections -->
@@ -221,33 +262,33 @@
         <div class="p-8 pb-16">
             <div class="max-w-6xl mx-auto">
                 <div class="flex flex-col md:flex-row gap-12 justify-center items-center">
-                <!-- Home Button -->
-                <a href="{base}/" 
-                    class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
-                    <span class="text-with-border relative z-10">Home</span>
-                </a>
+                    <!-- Home Button -->
+                    <a href="{base}/" 
+                        class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
+                        <span class="text-with-border relative z-10">Home</span>
+                    </a>
 
-                <!-- More About Me Button -->
-                <a href="{base}/about" 
-                    class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-30">
-                        <img src="{base}/avatar.png" alt="Avatar" class="w-full h-full object-cover" />
-                    </div>
-                    <span class="text-with-border relative z-10">More About Me!</span>
-                </a>
+                    <!-- More About Me Button -->
+                    <a href="{base}/about" 
+                        class="nav-button bg-zinc-700 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-30">
+                            <img src="{base}/avatar.png" alt="Avatar" class="w-full h-full object-cover" />
+                        </div>
+                        <span class="text-with-border relative z-10">More About Me!</span>
+                    </a>
 
-                <!-- My Projects Button -->
-                <a href="{base}/projects" 
-                    class="nav-button bg-zinc-600 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-40">
-                        <img src="{base}/projects-button.png" alt="Code on the background" class="w-full h-full object-cover" />
-                    </div>
-                    <span class="text-with-border relative z-10">My Projects</span>
-                </a>
+                    <!-- My Projects Button -->
+                    <a href="{base}/projects" 
+                        class="nav-button bg-zinc-600 hover:bg-zinc-600 rounded-2xl p-6 w-full md:w-80 h-40 flex items-center justify-center text-white font-bold text-xl md:text-2xl transition-all duration-300 relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-40">
+                            <img src="{base}/projects-button.png" alt="Code on the background" class="w-full h-full object-cover" />
+                        </div>
+                        <span class="text-with-border relative z-10">My Projects</span>
+                    </a>
+                </div> 
             </div>
         </div>
     </div>
-</div>
 
     <!-- Footer -->
     <footer class="text-center py-6 border-t border-zinc-700 mt-16">
