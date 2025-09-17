@@ -233,7 +233,7 @@
     font-weight: 700;
   }
   
-  h2, h3, p {
+  h2, h3 {
     text-shadow: 
       4px 4px 4px rgba(0, 0, 0, 0.8),
       2px 2px 1px rgba(0, 0, 0, 0.8);
