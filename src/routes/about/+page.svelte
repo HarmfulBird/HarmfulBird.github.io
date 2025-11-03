@@ -86,7 +86,7 @@
                 </p>
                 
                 <p class="text-lg md:text-xl lg:text-2xl mb-6 leading-relaxed">
-                    As a 20-year-old trans woman living in New Zealand, I've learned to approach challenges with patience and systematic thinking. Each problem becomes an opportunity to learn something new.
+                    As a 21-year-old trans woman living in New Zealand, I've learned to approach challenges with patience and systematic thinking. Each problem becomes an opportunity to learn something new.
                 </p>
 
                 <h2 class="text-2xl md:text-3xl lg:text-4xl mb-6 mt-12">What I Love</h2>
