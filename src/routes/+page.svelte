@@ -88,7 +88,7 @@
         </p>
         
         <p class="text-xl md:text-2xl lg:text-4xl leading-relaxed">
-            I am a 20 year old trans woman living in New Zealand.
+            I am a 21 year old trans woman living in New Zealand.
         </p>
         
         <!-- Mobile avatar - shows only on small screens -->
