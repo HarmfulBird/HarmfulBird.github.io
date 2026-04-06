@@ -83,7 +83,7 @@
         <div class="text-white max-w-2xl">
         <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-8">Welcome!</h1>
 
-        <h2 class="text-3xl md:text-5xl lg:text-7xl font-bold mb-8" Style="color: Red">!!! Some information on here is outdated and I have yet to have a chance to update it, My contact information is provided in the "contact" page so feel free to reach out if needed !!!</h2>
+        <h2 class="text-xl md:text-2xl lg:text-4xl font-bold mb-6" Style="color: Red">!!! Some information on here is outdated and I have yet to have a chance to update it, My contact information is provided in the "contact" page so feel free to reach out if needed !!!</h2>
         
         <p class="text-xl md:text-2xl lg:text-4xl mb-6 leading-relaxed">
             I'm Avery, but you know me as HarmlessBird.
