@@ -6,17 +6,6 @@
   // Contact page logic
   const contactMethods = [
     {
-      name: 'Discord',
-      icon: `${base}/icons/discord.svg`,
-      iconType: 'svg',
-      bgColor: 'bg-indigo-600',
-      textColor: 'text-indigo-400',
-      hoverColor: 'hover:text-indigo-300',
-      url: 'https://discord.com/users/384079198731501578/',
-      description: 'Best way to reach me for quick chats and discussions',
-      handle: '@HarmlessBird'
-    },
-    {
       name: 'Email',
       icon: '📧',
       iconType: 'emoji',
@@ -35,7 +24,18 @@
       textColor: 'text-sky-400',
       hoverColor: 'hover:text-sky-300',
       url: 'https://t.me/HarmlessBird',
-      description: 'Secure messaging and quick communication',
+      description: 'Best way to reach me for informal or friendly chats.',
+      handle: '@HarmlessBird'
+    },
+    {
+      name: 'Discord',
+      icon: `${base}/icons/discord.svg`,
+      iconType: 'svg',
+      bgColor: 'bg-indigo-600',
+      textColor: 'text-indigo-400',
+      hoverColor: 'hover:text-indigo-300',
+      url: 'https://discord.com/users/384079198731501578/',
+      description: '2nd best way to reach me for informal discussions',
       handle: '@HarmlessBird'
     },
     {
