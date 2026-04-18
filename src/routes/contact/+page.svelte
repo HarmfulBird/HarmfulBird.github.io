@@ -23,9 +23,9 @@
       bgColor: 'bg-sky-500',
       textColor: 'text-sky-400',
       hoverColor: 'hover:text-sky-300',
-      url: 'https://t.me/HarmlessBird',
+      url: 'https://t.me/Velnari_Bird',
       description: 'Best way to reach me for informal or friendly chats.',
-      handle: '@HarmlessBird'
+      handle: '@Velnari_Bird'
     },
     {
       name: 'Discord',
@@ -36,7 +36,7 @@
       hoverColor: 'hover:text-indigo-300',
       url: 'https://discord.com/users/384079198731501578/',
       description: '2nd best way to reach me for informal discussions',
-      handle: '@HarmlessBird'
+      handle: '@Velnari_Bird'
     },
     {
       name: 'GitHub',
